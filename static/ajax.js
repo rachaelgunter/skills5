@@ -1,25 +1,26 @@
-const findHumanId = () => {
-   
-      <tr>
-        <td>{itemName}</td>
-      </tr>
-    ;
+const formData = {
+
+    'human-id' : $('#type-field').val(),
   };
+
+$.get('/api/human/<human_id>', formData, (res) => {
+    
+    $('').html('human-id'),
+    $('').html('fname'),
+    $('').html('lname'),
+    $('').html('email')
+  });
   
 const formInputs = {
+    'human-id' : $('#type-field').val(),
     'fname': $('#type-field').val(),
-    'lname': $('#type-field').val()
+    'lname': $('#type-field').val(),
     'email': $('#type-field').val()
   };
 
 
-button.addEventListener('click' (evt) => {
+wordForm.addEventListener('submit' (evt) => {
 
-  name(some kind of function);
+    human.human_id;
 });
 
-$.get('/api/human/<human_id>', formData, (res) => {
-    
-    alert(res);
-  });
-});
